@@ -1,0 +1,4 @@
+export function cards(ctx) {
+  const { data, button, badge, empty, esc } = ctx;
+  return `<div class="toolbar">${button("+ Tambah flashcard", "card-new", "primary")}</div><div class="topic-grid">${data.flashcards.map((c) => `<article class="panel"><div class="panel-heading">${badge(c.category)}<small>Review: ${esc(c.review)}</small></div><h2>${esc(c.front)}</h2><details><summary>Lihat jawaban</summary><p>${esc(c.back)}</p><div class="actions">${button("Ulangi", `card-rate:${c.id}:0`)}${button("Sulit", `card-rate:${c.id}:1`)}${button("Ingat", `card-rate:${c.id}:2`)}</div></details><div class="actions">${button("Edit", `card-edit:${c.id}`, "text-button")}${button("Hapus", `card-delete:${c.id}`, "text-button")}</div></article>`).join("") || empty("Buat kartu pertama untuk spaced repetition. Jadwal review berasal dari penilaian recall Anda.")}</div>`;
+}
