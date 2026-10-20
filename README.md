@@ -2,7 +2,7 @@
 
 Personal learning management system untuk PPDS BTKV UI dan LPDP 2028. Vite + JavaScript ES Modules + IndexedDB + PWA. Output berupa static frontend; tidak ada backend, akun, API wajib, database eksternal, CDN, font remote, analytics, atau pengiriman data belajar ke server.
 
-**Roadmap pribadi 20 Oktober 2026 – 19 Oktober 2027 bukan kalender resmi UI/LPDP.** Ringkasan dan tiga soal awal berlabel SAMPLE / perlu verifikasi. Target TOEFL internal bukan persyaratan resmi. Materi awal berupa ringkasan belajar singkat, bukan buku ajar lengkap atau panduan keputusan klinis.
+**Roadmap pribadi 20 Oktober 2026 – 19 Oktober 2027 bukan kalender resmi UI/LPDP.** Ringkasan, tiga soal contoh lintas modul, dan 30 soal latihan LPDP orisinal berlabel SAMPLE / perlu verifikasi. Target TOEFL internal bukan persyaratan resmi. Materi awal berupa ringkasan belajar singkat, bukan buku ajar lengkap atau panduan keputusan klinis.
 
 ## Instalasi dan development
 
@@ -90,6 +90,7 @@ Routing memakai hash (`/#roadmap`), sehingga tidak membutuhkan rewrite SPA. Serv
 ```sh
 npm ci
 npx playwright install chromium
+npm run test:data
 npm run build
 npm test
 ```
@@ -99,3 +100,22 @@ Jika sistem telah memiliki `/usr/bin/chromium`, konfigurasi otomatis menggunakan
 Pengujian dijalankan pada build produksi dengan Playwright + Chromium, satu worker. Empat sesi 10/50/45/15 menit diuji menggunakan clock virtual, bukan menunggu dua jam nyata. Detail hasil terakhir ada di `TESTING.md`.
 
 Pengujian desktop/mobile menggunakan viewport browser, bukan perangkat fisik. Instalasi OS PWA, Safari/iOS dan domain Vercel production perlu dicek pada perangkat tujuan setelah deployment. Belum ada verifikasi klinis/akademik eksternal atas materi SAMPLE.
+
+
+## Bank 30 soal latihan LPDP
+
+Sumber data: [`src/data/bank_soal_lpdp_latihan_30.json`](src/data/bank_soal_lpdp_latihan_30.json). Bank ini dibuat khusus sebagai **latihan orisinal, bukan soal resmi LPDP**: 10 Verbal, 10 Numerik, dan 10 Penalaran Logis. Setiap soal memiliki lima opsi, kunci huruf, pembahasan, subkategori, tingkat kesulitan, dan estimasi waktu dalam detik. Pemeriksaan internal bukan pengesahan oleh penyelenggara seleksi.
+
+Buka menu **LPDP → Latihan skolastik LPDP**:
+
+- **Practice Mode** mengerjakan semua soal pada kategori/kesulitan terpilih tanpa batas waktu. **Latih soal ini** membuka satu soal saja.
+- **Timed Practice** menggunakan jumlah estimasi waktu seluruh soal terpilih sebagai batas waktu sesi. Deadline berbasis timestamp; reload atau pindah halaman tidak meresetnya. Saat waktu habis, hanya jawaban yang telah dikirim yang dinilai; soal belum dijawab tetap tercatat sebagai belum dijawab.
+- **Kirim jawaban LPDP** menyimpan jawaban, skor soal 0/1, pembahasan, kunci saat pengerjaan, durasi aktual, dan estimasi waktu. Pembahasan muncul segera sesudah jawaban terkirim, termasuk pada Timed Practice. Skor akhir 0–100 = jumlah benar / jumlah soal dalam sesi × 100; ini bukan skor resmi LPDP.
+- **Review soal salah** membuat sesi dari soal pada filter yang jawaban terakhirnya salah. Koreksi yang dijawab benar mengeluarkan soal dari daftar review ini; riwayat jawaban lama dan error log tidak dihapus.
+- Riwayat jawaban dan hasil sesi tersedia pada modul LPDP. Jawaban juga masuk statistik akurasi aplikasi dan error log umum. Pengerjaan offline didukung setelah cache shell awal tersedia.
+
+Adapter `src/data/lpdp-questions.js` memetakan kategori paket menjadi `category: LPDP`, kategori asli menjadi `subcategory`, subkategori asli menjadi `topic`, dan `estimated_seconds` menjadi `estimatedSeconds`. Pilihan disimpan sebagai teks berlabel A–E agar kompatibel dengan bank soal aplikasi. `answerKey`, `optionKeys`, `original`, dan `bankMetadata` mempertahankan kunci huruf serta seluruh field sumber tanpa kehilangan informasi. Format JSON sumber adalah paket seed; export/import Bank Soal dan backup memakai format aplikasi yang sudah ada.
+
+Seed LPDP memeriksa setiap ID dalam transaksi IndexedDB setiap startup, terpisah dari marker `seed-v1` lama. Hanya soal yang belum ada yang ditambahkan; ID stabil mencegah duplikat, dan soal yang diedit pengguna tidak ditimpa. Soal seed yang dihapus akan ditambahkan kembali pada startup berikutnya. Tidak ada reset database atau migrasi destruktif. Jawaban dan error log ditulis dalam satu transaksi; ID jawaban per sesi/soal mencegah kirim ganda. Sesi, hasil, jawaban dan metadata sumber ikut backup/restore yang telah ada.
+
+Validasi data mandiri: `npm run test:data` memeriksa 30 kunci terhadap daftar jawaban berbasis isi, perhitungan numerik, enumerasi kendala logika, kelengkapan metadata, dan ID unik. Suite browser mengerjakan seluruh 30 soal di kedua mode, bukan hanya memeriksa jumlahnya.

@@ -1,3 +1,4 @@
+import { lpdpPractice } from "./lpdp.js";
 export function modulePage(category, ctx) {
   const {
     data,
@@ -20,5 +21,5 @@ export function modulePage(category, ctx) {
             .join("") || empty("Belum ada skor latihan tercatat.")
         }<label>Listening lokal<input type="file" id="audio-file" accept="audio/*"></label><audio id="local-audio" controls></audio><p class="muted">File diputar dari perangkat, tidak diunggah. Pilih kembali file setelah reload.</p></section>`
       : ""
-  }<div class="topic-grid">${ts.map((t) => `<article class="panel"><div class="panel-heading">${badge(t.status)}<span class="muted">${t.mastery || 0}/5 recall</span></div><h2>${esc(t.title)}</h2><p>${esc(t.objective)}</p><p class="muted">${esc(t.summary)}</p>${button("Buka ruang materi ↗", `topic:${t.id}`)}</article>`).join("")}</div><section class="panel"><div class="panel-heading"><h2>${category === "LPDP" ? "Esai & latihan wawancara" : category === "Research" ? "Proyek riset & jurnal" : "Catatan belajar"}</h2>${button("+ Tambah", category === "Research" ? "research-new" : "note-new")}</div>${category === "Research" ? researchHTML() : notesHTML(category)}</section><div class="actions">${button("Latihan soal", "questions", "primary")}${button("Review flashcards", "cards")}${button("Mulai simulasi berbatas waktu", "start-study")}</div>`;
+  }${category === "LPDP" ? lpdpPractice(ctx) : ""}<div class="topic-grid">${ts.map((t) => `<article class="panel"><div class="panel-heading">${badge(t.status)}<span class="muted">${t.mastery || 0}/5 recall</span></div><h2>${esc(t.title)}</h2><p>${esc(t.objective)}</p><p class="muted">${esc(t.summary)}</p>${button("Buka ruang materi ↗", `topic:${t.id}`)}</article>`).join("")}</div><section class="panel"><div class="panel-heading"><h2>${category === "LPDP" ? "Esai & latihan wawancara" : category === "Research" ? "Proyek riset & jurnal" : "Catatan belajar"}</h2>${button("+ Tambah", category === "Research" ? "research-new" : "note-new")}</div>${category === "Research" ? researchHTML() : notesHTML(category)}</section><div class="actions">${button("Latihan soal", "questions", "primary")}${button("Review flashcards", "cards")}${button("Mulai simulasi berbatas waktu", "start-study")}</div>`;
 }

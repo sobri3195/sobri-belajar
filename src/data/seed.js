@@ -1,3 +1,4 @@
+import { seedLpdpQuestions } from "./lpdp-questions.js";
 import { content } from "./topic-content.js";
 import { get, transaction } from "../db/indexeddb.js";
 export const categories = [
@@ -113,6 +114,7 @@ export const topicGroups = {
   ],
 };
 export async function seed() {
+  await seedLpdpQuestions();
   if (await get("settings", "seed-v1")) return;
   await transaction(
     ["settings", "roadmapMonths", "topics", "questions", "documents"],

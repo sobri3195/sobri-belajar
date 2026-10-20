@@ -1,3 +1,4 @@
+import * as lpdp from "./services/lpdp-practice.js";
 import { dashboard } from "./pages/dashboard.js";
 import { planner } from "./pages/planner.js";
 import { roadmap } from "./pages/roadmap.js";
@@ -52,6 +53,9 @@ const links = [
   ["notes", "✎", "Catatan"],
   ["settings", "⚙", "Data & Pengaturan"],
 ];
+let lpdpFilter = "Semua",
+  lpdpDifficulty = "Semua",
+  lpdpExpiryBusy = false;
 let planDate = today();
 let quizDeadline = 0,
   quizRunId = null;
@@ -248,6 +252,8 @@ async function render() {
   route = requestedRoute;
   const title = links.find((l) => l[0] === route)?.[2] || "Dashboard";
   const viewContext = {
+    lpdpFilter,
+    lpdpDifficulty,
     planDate,
     mins,
     data,
@@ -676,6 +682,59 @@ async function cacheStatus() {
 }
 async function action(a) {
   const [key, id, value] = a.split(":");
+  if (key.startsWith("lpdp-")) {
+    const active = await lpdp.currentLpdpRun();
+    if (key.startsWith("lpdp-start-") || key === "lpdp-single") {
+      const mode =
+        key === "lpdp-start-timed"
+          ? "timed"
+          : key === "lpdp-start-review"
+            ? "review"
+            : "practice";
+      const allQuestions = data.questions.filter((q) => q.category === "LPDP");
+      const matching = allQuestions.filter(
+        (q) =>
+          (lpdpFilter === "Semua" || q.subcategory === lpdpFilter) &&
+          (lpdpDifficulty === "Semua" || q.difficulty === lpdpDifficulty),
+      );
+      const selected =
+        key === "lpdp-single"
+          ? allQuestions.filter((q) => q.id === id)
+          : mode === "review"
+            ? lpdp.latestWrongQuestions(matching, data.attempts)
+            : matching;
+      if (!selected.length) {
+        toast(
+          mode === "review"
+            ? "Tidak ada jawaban salah pada filter ini."
+            : "Tidak ada soal sesuai filter.",
+        );
+        return;
+      }
+      if (active?.status === "running") {
+        if (
+          !confirm(
+            "Akhiri latihan aktif dan mulai latihan baru? Jawaban lama tetap disimpan.",
+          )
+        )
+          return;
+        await lpdp.finishLpdpRun("ended");
+      }
+      await lpdp.startLpdpRun(
+        selected.map((q) => q.id),
+        mode,
+      );
+    } else if (key === "lpdp-next") await lpdp.nextLpdpQuestion();
+    else if (key === "lpdp-finish") {
+      if (!confirm("Akhiri latihan? Jawaban yang belum dikirim tidak dinilai."))
+        return;
+      await lpdp.finishLpdpRun("ended");
+    }
+    await render();
+    $("#lpdp-practice")?.scrollIntoView({ block: "start" });
+    return;
+  }
+
   if (
     [
       "dashboard",
@@ -1041,6 +1100,17 @@ async function submit(e) {
   e.preventDefault();
   const f = Object.fromEntries(new FormData(form));
   try {
+    if (form.dataset.form === "lpdp-answer") {
+      if (form.dataset.submitting) return;
+      form.dataset.submitting = "true";
+      try {
+        await lpdp.submitLpdpAnswer(f.answer);
+        await render();
+      } finally {
+        delete form.dataset.submitting;
+      }
+      return;
+    }
     if (form.dataset.form === "answer") {
       if (form.dataset.answered) return;
       const q = data.questions.find((q) => q.id === form.dataset.id);
@@ -1102,6 +1172,12 @@ async function submit(e) {
 }
 async function change(e) {
   try {
+    if (e.target.id === "lpdp-category" || e.target.id === "lpdp-difficulty") {
+      if (e.target.id === "lpdp-category") lpdpFilter = e.target.value;
+      else lpdpDifficulty = e.target.value;
+      await render();
+      return;
+    }
     if (e.target.dataset.task) {
       const t = await get("studyTasks", e.target.dataset.task);
       await put("studyTasks", { ...t, done: e.target.checked });
@@ -1173,11 +1249,10 @@ async function change(e) {
   }
 }
 export async function start() {
-  await seed();
-  await render();
+  let initialized = false;
   window.addEventListener("hashchange", () => {
     filter = "";
-    render().catch((e) => toast(e.message));
+    if (initialized) render().catch((e) => toast(e.message));
   });
   document.addEventListener("click", (e) => {
     const b = e.target.closest("[data-action]");
@@ -1190,7 +1265,31 @@ export async function start() {
   document.addEventListener("change", change);
   window.addEventListener("online", connection);
   window.addEventListener("offline", connection);
+  await seed();
+  initialized = true;
+  await render();
   setInterval(() => {
+    const lpdpRun = data.settings?.find((s) => s.id === lpdp.ACTIVE_ID);
+    if (lpdpRun?.status === "running" && lpdpRun.deadline) {
+      const remaining = Math.max(
+        0,
+        Math.ceil((lpdpRun.deadline - Date.now()) / 1000),
+      );
+      const countdown = $("#lpdp-countdown");
+      if (countdown)
+        countdown.textContent = `Sisa waktu ${Math.floor(remaining / 60)}:${String(remaining % 60).padStart(2, "0")}`;
+      if (!remaining && !lpdpExpiryBusy) {
+        lpdpExpiryBusy = true;
+        lpdp
+          .finishLpdpRun("expired")
+          .then(() => render())
+          .catch((e) => toast(e.message))
+          .finally(() => {
+            lpdpExpiryBusy = false;
+          });
+      }
+    }
+
     if (quizDeadline) {
       const qclock = $("#quiz-clock");
       if (qclock)
