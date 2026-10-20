@@ -1,0 +1,38 @@
+:root {
+  --navy: #073b66;
+  --dark: #052a49;
+  --blue: #0878bd;
+  --light: #eaf5fc;
+  --gold: #f4c247;
+  --bg: #f6f8fa;
+  --surface: #fff;
+  --text: #17344c;
+  --muted: #607286;
+  --border: #e5ebf0;
+  --success: #119b78;
+  --warning: #f59b32;
+  --danger: #d9364f;
+  color-scheme: light;
+}
+html[data-theme="Gelap"] {
+  --navy: #b9dfff;
+  --blue: #67bff5;
+  --light: #19364b;
+  --bg: #0c1d2a;
+  --surface: #112838;
+  --text: #e5eef5;
+  --muted: #a6baca;
+  --border: #294454;
+  color-scheme: dark;
+}
+html[data-theme="Gelap"] .hero,
+html[data-theme="Gelap"] .primary,
+html[data-theme="Gelap"] #toast {
+  background: #073b66;
+}
+html[data-theme="Gelap"] .brand-mark {
+  background: #0878bd;
+}
+html[data-theme="Gelap"] .notice.success {
+  background: #153c34;
+}
