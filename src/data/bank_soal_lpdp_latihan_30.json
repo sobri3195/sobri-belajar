@@ -1,0 +1,548 @@
+{
+  "id": "lpdp-latihan-30-v1",
+  "version": 1,
+  "title": "Bank Soal LPDP Latihan 30",
+  "notice": "LATIHAN ORISINAL — BUKAN SOAL RESMI LPDP. Materi belajar mandiri, perlu verifikasi; tidak menjamin kesesuaian format seleksi.",
+  "questions": [
+    {
+      "id": "LPDP-L30-01",
+      "category": "Verbal",
+      "subcategory": "Sinonim",
+      "difficulty": "Mudah",
+      "estimated_seconds": 45,
+      "question": "Makna kata “implisit” yang paling tepat adalah …",
+      "options": {
+        "A": "tersirat",
+        "B": "tersurat",
+        "C": "terperinci",
+        "D": "terbuka",
+        "E": "terukur"
+      },
+      "correct_answer": "A",
+      "explanation": "Implisit berarti terkandung secara tidak langsung atau tersirat. Tersurat adalah makna eksplisit.",
+      "source": "Soal latihan orisinal Sobri Study Roadmap; bukan soal resmi LPDP; perlu verifikasi."
+    },
+    {
+      "id": "LPDP-L30-02",
+      "category": "Verbal",
+      "subcategory": "Antonim",
+      "difficulty": "Mudah",
+      "estimated_seconds": 45,
+      "question": "Lawan kata “stagnan” dalam konteks perkembangan program adalah …",
+      "options": {
+        "A": "dinamis",
+        "B": "mandek",
+        "C": "tetap",
+        "D": "pasif",
+        "E": "beku"
+      },
+      "correct_answer": "A",
+      "explanation": "Stagnan menggambarkan keadaan tidak berkembang. Dinamis menunjukkan gerak atau perubahan, sehingga merupakan lawan paling tepat dalam konteks tersebut.",
+      "source": "Soal latihan orisinal Sobri Study Roadmap; bukan soal resmi LPDP; perlu verifikasi."
+    },
+    {
+      "id": "LPDP-L30-03",
+      "category": "Verbal",
+      "subcategory": "Analogi",
+      "difficulty": "Mudah",
+      "estimated_seconds": 60,
+      "question": "Kompas : arah = termometer : …",
+      "options": {
+        "A": "jarak",
+        "B": "suhu",
+        "C": "tekanan",
+        "D": "waktu",
+        "E": "massa"
+      },
+      "correct_answer": "B",
+      "explanation": "Hubungannya alat dengan besaran/informasi yang ditunjukkan: kompas menunjukkan arah, termometer mengukur suhu.",
+      "source": "Soal latihan orisinal Sobri Study Roadmap; bukan soal resmi LPDP; perlu verifikasi."
+    },
+    {
+      "id": "LPDP-L30-04",
+      "category": "Verbal",
+      "subcategory": "Analogi",
+      "difficulty": "Sedang",
+      "estimated_seconds": 60,
+      "question": "Penulis : naskah = arsitek : …",
+      "options": {
+        "A": "panen",
+        "B": "obat",
+        "C": "gambar rancangan",
+        "D": "pasien",
+        "E": "putusan"
+      },
+      "correct_answer": "C",
+      "explanation": "Penulis menghasilkan naskah; arsitek menghasilkan gambar rancangan. Relasinya profesi dengan hasil kerja yang menjadi rencana atau karya tertulis.",
+      "source": "Soal latihan orisinal Sobri Study Roadmap; bukan soal resmi LPDP; perlu verifikasi."
+    },
+    {
+      "id": "LPDP-L30-05",
+      "category": "Verbal",
+      "subcategory": "Ide pokok",
+      "difficulty": "Sedang",
+      "estimated_seconds": 90,
+      "question": "Bacaan: “Perpustakaan digital memperluas akses bacaan. Namun, perangkat dan koneksi belum tersedia merata. Karena itu, penyediaan akses bersama perlu berjalan seiring dengan digitalisasi.” Ide pokok bacaan adalah …",
+      "options": {
+        "A": "Digitalisasi selalu mengurangi minat baca.",
+        "B": "Digitalisasi perlu disertai pemerataan akses.",
+        "C": "Seluruh warga sudah memiliki koneksi.",
+        "D": "Akses bersama tidak dibutuhkan.",
+        "E": "Perpustakaan fisik harus ditutup."
+      },
+      "correct_answer": "B",
+      "explanation": "Kalimat kedua dan ketiga membatasi manfaat digitalisasi dengan masalah akses. Gagasan utamanya menggabungkan digitalisasi dengan pemerataan, bukan penghapusan perpustakaan fisik.",
+      "source": "Soal latihan orisinal Sobri Study Roadmap; bukan soal resmi LPDP; perlu verifikasi."
+    },
+    {
+      "id": "LPDP-L30-06",
+      "category": "Verbal",
+      "subcategory": "Inferensi bacaan",
+      "difficulty": "Sedang",
+      "estimated_seconds": 90,
+      "question": "Bacaan: “Setelah jadwal layanan diperpanjang, jumlah kunjungan meningkat. Peneliti belum mengendalikan pengaruh kampanye informasi yang berlangsung bersamaan.” Kesimpulan paling hati-hati adalah …",
+      "options": {
+        "A": "Penelitian membuktikan hubungan sebab akibat tunggal.",
+        "B": "Kenaikan kunjungan belum dapat diatribusikan hanya pada jadwal layanan.",
+        "C": "Tidak ada kenaikan kunjungan.",
+        "D": "Kampanye pasti tidak berpengaruh.",
+        "E": "Perpanjangan jadwal pasti menjadi satu-satunya penyebab kenaikan."
+      },
+      "correct_answer": "B",
+      "explanation": "Jadwal dan kampanye berubah bersamaan. Tanpa mengendalikan faktor kampanye, atribusi sebab tunggal tidak didukung. Bacaan tetap menyatakan kunjungan meningkat.",
+      "source": "Soal latihan orisinal Sobri Study Roadmap; bukan soal resmi LPDP; perlu verifikasi."
+    },
+    {
+      "id": "LPDP-L30-07",
+      "category": "Verbal",
+      "subcategory": "Kalimat efektif",
+      "difficulty": "Mudah",
+      "estimated_seconds": 60,
+      "question": "Pilih kalimat yang paling efektif.",
+      "options": {
+        "A": "Bagi semua peserta agar supaya hadir.",
+        "B": "Peserta diminta mengisi formulir sebelum wawancara.",
+        "C": "Para peserta-peserta diminta masuk.",
+        "D": "Adalah merupakan kewajiban untuk mengisi.",
+        "E": "Karena rapat ditunda sehingga peserta pulang."
+      },
+      "correct_answer": "B",
+      "explanation": "Kalimat C mempunyai subjek dan predikat jelas serta tidak menggunakan bentuk jamak atau penghubung yang berlebihan. Pilihan lain mengandung pemborosan atau struktur tidak lengkap.",
+      "source": "Soal latihan orisinal Sobri Study Roadmap; bukan soal resmi LPDP; perlu verifikasi."
+    },
+    {
+      "id": "LPDP-L30-08",
+      "category": "Verbal",
+      "subcategory": "Makna kontekstual",
+      "difficulty": "Mudah",
+      "estimated_seconds": 60,
+      "question": "Dalam kalimat “Tim melakukan mitigasi risiko sebelum penelitian dimulai”, makna “mitigasi” adalah …",
+      "options": {
+        "A": "penghapusan seluruh data",
+        "B": "penggandaan risiko",
+        "C": "penundaan tanpa batas",
+        "D": "pengabaian prosedur",
+        "E": "upaya mengurangi risiko"
+      },
+      "correct_answer": "E",
+      "explanation": "Mitigasi adalah upaya mengurangi kemungkinan atau dampak risiko. Mitigasi tidak menjamin semua risiko hilang.",
+      "source": "Soal latihan orisinal Sobri Study Roadmap; bukan soal resmi LPDP; perlu verifikasi."
+    },
+    {
+      "id": "LPDP-L30-09",
+      "category": "Verbal",
+      "subcategory": "Evaluasi argumen",
+      "difficulty": "Sedang",
+      "estimated_seconds": 90,
+      "question": "Argumen: “Kelas daring diusulkan untuk meningkatkan akses pelatihan bagi tenaga kesehatan di daerah terpencil.” Informasi yang paling memperkuat argumen adalah …",
+      "options": {
+        "A": "Nama program akan diganti.",
+        "B": "Gedung kelas memiliki cat baru.",
+        "C": "Sebagian besar calon peserta memiliki perangkat dan koneksi yang memadai.",
+        "D": "Sebagian peserta menyukai warna biru.",
+        "E": "Pelatih pernah mengikuti seminar seni."
+      },
+      "correct_answer": "C",
+      "explanation": "Ketersediaan perangkat dan koneksi merupakan prasyarat yang relevan agar kelas daring benar-benar dapat diakses. Pilihan lain tidak menghubungkan metode daring dengan akses peserta.",
+      "source": "Soal latihan orisinal Sobri Study Roadmap; bukan soal resmi LPDP; perlu verifikasi."
+    },
+    {
+      "id": "LPDP-L30-10",
+      "category": "Verbal",
+      "subcategory": "Simpulan bacaan",
+      "difficulty": "Sedang",
+      "estimated_seconds": 90,
+      "question": "Bacaan: “Dalam uji coba, kelompok A menyelesaikan lebih banyak soal daripada kelompok B. Namun, akurasi kelompok A lebih rendah. Durasi pengerjaan kedua kelompok sama.” Pernyataan yang didukung bacaan adalah …",
+      "options": {
+        "A": "Kecepatan selalu menyebabkan jawaban salah.",
+        "B": "Kelompok A unggul dalam semua ukuran.",
+        "C": "Kelompok B pasti memiliki skor total lebih rendah.",
+        "D": "Kelompok B menggunakan waktu lebih lama.",
+        "E": "Jumlah soal selesai dan akurasi memberi gambaran kinerja yang berbeda."
+      },
+      "correct_answer": "E",
+      "explanation": "Kelompok A unggul pada jumlah soal selesai, sedangkan kelompok B unggul pada akurasi. Tanpa jumlah jawaban benar atau aturan skor, keunggulan total tidak dapat dipastikan.",
+      "source": "Soal latihan orisinal Sobri Study Roadmap; bukan soal resmi LPDP; perlu verifikasi."
+    },
+    {
+      "id": "LPDP-L30-11",
+      "category": "Numerik",
+      "subcategory": "Persentase",
+      "difficulty": "Mudah",
+      "estimated_seconds": 60,
+      "question": "Harga buku Rp240.000 didiskon 15%. Berapa harga setelah diskon?",
+      "options": {
+        "A": "Rp216.000",
+        "B": "Rp210.000",
+        "C": "Rp225.000",
+        "D": "Rp180.000",
+        "E": "Rp204.000"
+      },
+      "correct_answer": "E",
+      "explanation": "Diskon = 15/100 × 240.000 = 36.000. Harga akhir = 240.000 − 36.000 = Rp204.000.",
+      "source": "Soal latihan orisinal Sobri Study Roadmap; bukan soal resmi LPDP; perlu verifikasi."
+    },
+    {
+      "id": "LPDP-L30-12",
+      "category": "Numerik",
+      "subcategory": "Rasio",
+      "difficulty": "Mudah",
+      "estimated_seconds": 60,
+      "question": "Rasio peserta kelompok A dan B adalah 3 : 5. Jika totalnya 64 orang, berapa orang di kelompok A?",
+      "options": {
+        "A": "20",
+        "B": "32",
+        "C": "24",
+        "D": "40",
+        "E": "16"
+      },
+      "correct_answer": "C",
+      "explanation": "Total bagian = 3 + 5 = 8. Satu bagian = 64/8 = 8 orang. Kelompok A = 3 × 8 = 24 orang.",
+      "source": "Soal latihan orisinal Sobri Study Roadmap; bukan soal resmi LPDP; perlu verifikasi."
+    },
+    {
+      "id": "LPDP-L30-13",
+      "category": "Numerik",
+      "subcategory": "Rata-rata",
+      "difficulty": "Sedang",
+      "estimated_seconds": 75,
+      "question": "Rata-rata nilai 5 peserta adalah 72. Seorang peserta keenam memperoleh 84. Berapa rata-rata keenam peserta?",
+      "options": {
+        "A": "75",
+        "B": "74",
+        "C": "76",
+        "D": "78",
+        "E": "80"
+      },
+      "correct_answer": "B",
+      "explanation": "Jumlah nilai awal = 5 × 72 = 360. Jumlah baru = 360 + 84 = 444. Rata-rata baru = 444/6 = 74.",
+      "source": "Soal latihan orisinal Sobri Study Roadmap; bukan soal resmi LPDP; perlu verifikasi."
+    },
+    {
+      "id": "LPDP-L30-14",
+      "category": "Numerik",
+      "subcategory": "Aljabar",
+      "difficulty": "Mudah",
+      "estimated_seconds": 60,
+      "question": "Jika 3x − 7 = 2x + 11, nilai x adalah …",
+      "options": {
+        "A": "7",
+        "B": "11",
+        "C": "4",
+        "D": "21",
+        "E": "18"
+      },
+      "correct_answer": "E",
+      "explanation": "Kurangi kedua ruas dengan 2x: x − 7 = 11. Tambahkan 7 pada kedua ruas sehingga x = 18.",
+      "source": "Soal latihan orisinal Sobri Study Roadmap; bukan soal resmi LPDP; perlu verifikasi."
+    },
+    {
+      "id": "LPDP-L30-15",
+      "category": "Numerik",
+      "subcategory": "Pola bilangan",
+      "difficulty": "Sedang",
+      "estimated_seconds": 75,
+      "question": "Setiap suku diperoleh dengan mengalikan suku sebelumnya dengan 2, lalu menambah 1. Jika suku pertama 3, suku kelima adalah …",
+      "options": {
+        "A": "31",
+        "B": "63",
+        "C": "62",
+        "D": "47",
+        "E": "32"
+      },
+      "correct_answer": "B",
+      "explanation": "Dengan aturan yang dinyatakan, urutannya 3, 7, 15, 31, 63. Jadi suku kelima adalah 63. Aturan eksplisit menghindari ambiguitas pola.",
+      "source": "Soal latihan orisinal Sobri Study Roadmap; bukan soal resmi LPDP; perlu verifikasi."
+    },
+    {
+      "id": "LPDP-L30-16",
+      "category": "Numerik",
+      "subcategory": "Kecepatan",
+      "difficulty": "Mudah",
+      "estimated_seconds": 60,
+      "question": "Kendaraan menempuh 150 km dengan kecepatan tetap 60 km/jam, tanpa berhenti. Waktu tempuhnya adalah …",
+      "options": {
+        "A": "3 jam",
+        "B": "2,5 jam",
+        "C": "3,5 jam",
+        "D": "2 jam",
+        "E": "4 jam"
+      },
+      "correct_answer": "B",
+      "explanation": "Waktu = jarak/kecepatan = 150/60 = 2,5 jam, yaitu 2 jam 30 menit.",
+      "source": "Soal latihan orisinal Sobri Study Roadmap; bukan soal resmi LPDP; perlu verifikasi."
+    },
+    {
+      "id": "LPDP-L30-17",
+      "category": "Numerik",
+      "subcategory": "Laju kerja",
+      "difficulty": "Sedang",
+      "estimated_seconds": 90,
+      "question": "A menyelesaikan satu pekerjaan dalam 6 hari dan B dalam 12 hari. Jika laju keduanya tetap dan dapat dijumlahkan, berapa hari dibutuhkan saat bekerja bersama?",
+      "options": {
+        "A": "2",
+        "B": "6",
+        "C": "4",
+        "D": "3",
+        "E": "9"
+      },
+      "correct_answer": "C",
+      "explanation": "Laju gabungan = 1/6 + 1/12 = 3/12 = 1/4 pekerjaan per hari. Satu pekerjaan memerlukan 4 hari.",
+      "source": "Soal latihan orisinal Sobri Study Roadmap; bukan soal resmi LPDP; perlu verifikasi."
+    },
+    {
+      "id": "LPDP-L30-18",
+      "category": "Numerik",
+      "subcategory": "Peluang",
+      "difficulty": "Sedang",
+      "estimated_seconds": 90,
+      "question": "Sebuah kantong berisi 4 bola merah dan 6 bola biru. Dua bola diambil acak tanpa pengembalian. Peluang keduanya merah adalah …",
+      "options": {
+        "A": "4/25",
+        "B": "2/15",
+        "C": "4/15",
+        "D": "2/5",
+        "E": "1/5"
+      },
+      "correct_answer": "B",
+      "explanation": "Peluang merah pertama = 4/10, merah kedua setelah merah pertama = 3/9. Hasil = (4/10)(3/9) = 12/90 = 2/15.",
+      "source": "Soal latihan orisinal Sobri Study Roadmap; bukan soal resmi LPDP; perlu verifikasi."
+    },
+    {
+      "id": "LPDP-L30-19",
+      "category": "Numerik",
+      "subcategory": "Interpretasi data",
+      "difficulty": "Sedang",
+      "estimated_seconds": 75,
+      "question": "Kunjungan perpustakaan pada Januari 120, Februari 150, dan Maret 180. Persentase kenaikan dari Januari ke Maret adalah …",
+      "options": {
+        "A": "50%",
+        "B": "60%",
+        "C": "25%",
+        "D": "40%",
+        "E": "20%"
+      },
+      "correct_answer": "A",
+      "explanation": "Kenaikan = 180 − 120 = 60. Persentase kenaikan terhadap Januari = 60/120 × 100% = 50%.",
+      "source": "Soal latihan orisinal Sobri Study Roadmap; bukan soal resmi LPDP; perlu verifikasi."
+    },
+    {
+      "id": "LPDP-L30-20",
+      "category": "Numerik",
+      "subcategory": "Perbandingan",
+      "difficulty": "Sedang",
+      "estimated_seconds": 90,
+      "question": "Sebuah larutan 200 mL mengandung 30% zat X. Ditambahkan 100 mL pelarut tanpa zat X. Dengan asumsi volume dapat dijumlahkan, konsentrasi X menjadi …",
+      "options": {
+        "A": "15%",
+        "B": "10%",
+        "C": "25%",
+        "D": "18%",
+        "E": "20%"
+      },
+      "correct_answer": "E",
+      "explanation": "Jumlah X tetap 30% × 200 = 60 mL. Volume akhir 300 mL. Konsentrasi akhir = 60/300 × 100% = 20%.",
+      "source": "Soal latihan orisinal Sobri Study Roadmap; bukan soal resmi LPDP; perlu verifikasi."
+    },
+    {
+      "id": "LPDP-L30-21",
+      "category": "Penalaran Logis",
+      "subcategory": "Silogisme",
+      "difficulty": "Mudah",
+      "estimated_seconds": 75,
+      "question": "Semua peneliti dalam tim mematuhi protokol. Sebagian dokter adalah peneliti dalam tim. Kesimpulan yang pasti benar adalah …",
+      "options": {
+        "A": "Tidak ada dokter mematuhi protokol.",
+        "B": "Semua dokter mematuhi protokol.",
+        "C": "Semua yang mematuhi protokol adalah dokter.",
+        "D": "Sebagian dokter mematuhi protokol.",
+        "E": "Semua peneliti bukan dokter."
+      },
+      "correct_answer": "D",
+      "explanation": "Dokter yang termasuk peneliti dalam tim termasuk kelompok yang mematuhi protokol. Jadi setidaknya sebagian dokter mematuhi protokol; pernyataan universal tentang semua dokter tidak mengikuti premis.",
+      "source": "Soal latihan orisinal Sobri Study Roadmap; bukan soal resmi LPDP; perlu verifikasi."
+    },
+    {
+      "id": "LPDP-L30-22",
+      "category": "Penalaran Logis",
+      "subcategory": "Implikasi",
+      "difficulty": "Sedang",
+      "estimated_seconds": 75,
+      "question": "Aturan: jika proposal disetujui, dana dicairkan. Diketahui dana tidak dicairkan. Berdasarkan aturan tersebut, kesimpulan yang benar adalah …",
+      "options": {
+        "A": "Proposal tidak disetujui.",
+        "B": "Aturan tidak memberi kesimpulan apa pun.",
+        "C": "Dana dicairkan besok.",
+        "D": "Proposal pasti disetujui.",
+        "E": "Proposal disetujui sebagian."
+      },
+      "correct_answer": "A",
+      "explanation": "Bentuknya P → Q dan bukan Q, sehingga bukan P (modus tollens). Kesimpulan mengikuti aturan sebagaimana dinyatakan, bukan dugaan proses administrasi nyata.",
+      "source": "Soal latihan orisinal Sobri Study Roadmap; bukan soal resmi LPDP; perlu verifikasi."
+    },
+    {
+      "id": "LPDP-L30-23",
+      "category": "Penalaran Logis",
+      "subcategory": "Urutan",
+      "difficulty": "Sedang",
+      "estimated_seconds": 90,
+      "question": "Empat presentasi A, B, C, D memenuhi aturan: A sebelum B, C setelah B, dan D sebelum A. Urutan yang memenuhi seluruh aturan adalah …",
+      "options": {
+        "A": "B – A – C – D",
+        "B": "D – B – A – C",
+        "C": "D – A – B – C",
+        "D": "D – A – C – B",
+        "E": "A – D – B – C"
+      },
+      "correct_answer": "C",
+      "explanation": "Gabungkan aturan: D sebelum A sebelum B sebelum C. Hanya D–A–B–C memenuhi ketiganya.",
+      "source": "Soal latihan orisinal Sobri Study Roadmap; bukan soal resmi LPDP; perlu verifikasi."
+    },
+    {
+      "id": "LPDP-L30-24",
+      "category": "Penalaran Logis",
+      "subcategory": "Himpunan",
+      "difficulty": "Sedang",
+      "estimated_seconds": 90,
+      "question": "Dalam kelompok 40 orang, 25 mengikuti kelas statistik dan 20 mengikuti kelas English. Sebanyak 10 mengikuti keduanya. Berapa orang yang tidak mengikuti kelas statistik maupun kelas English?",
+      "options": {
+        "A": "0",
+        "B": "10",
+        "C": "15",
+        "D": "5",
+        "E": "20"
+      },
+      "correct_answer": "D",
+      "explanation": "Jumlah yang mengikuti sedikitnya satu kelas = 25 + 20 − 10 = 35. Yang tidak mengikuti kelas apa pun = 40 − 35 = 5 orang.",
+      "source": "Soal latihan orisinal Sobri Study Roadmap; bukan soal resmi LPDP; perlu verifikasi."
+    },
+    {
+      "id": "LPDP-L30-25",
+      "category": "Penalaran Logis",
+      "subcategory": "Negasi",
+      "difficulty": "Sedang",
+      "estimated_seconds": 75,
+      "question": "Negasi dari pernyataan “Semua peserta mengumpulkan esai” adalah …",
+      "options": {
+        "A": "Hanya satu peserta mengumpulkan esai.",
+        "B": "Tidak ada peserta mengumpulkan esai.",
+        "C": "Ada peserta yang tidak mengumpulkan esai.",
+        "D": "Sebagian peserta mengumpulkan dua esai.",
+        "E": "Semua peserta tidak mengumpulkan esai."
+      },
+      "correct_answer": "C",
+      "explanation": "Negasi pernyataan universal “semua P memiliki Q” adalah eksistensial “ada P yang tidak memiliki Q”, bukan tidak ada P yang memiliki Q.",
+      "source": "Soal latihan orisinal Sobri Study Roadmap; bukan soal resmi LPDP; perlu verifikasi."
+    },
+    {
+      "id": "LPDP-L30-26",
+      "category": "Penalaran Logis",
+      "subcategory": "Syarat perlu",
+      "difficulty": "Sedang",
+      "estimated_seconds": 90,
+      "question": "Aturan: “Peserta boleh masuk ruang ujian hanya jika membawa kartu identitas.” Rani masuk ruang ujian dengan mematuhi aturan. Pernyataan yang pasti benar adalah …",
+      "options": {
+        "A": "Semua pembawa kartu identitas masuk.",
+        "B": "Rani membawa kartu identitas.",
+        "C": "Kartu identitas tidak diperlukan.",
+        "D": "Membawa kartu identitas selalu cukup untuk masuk.",
+        "E": "Rani tidak membawa kartu identitas."
+      },
+      "correct_answer": "B",
+      "explanation": "“Masuk hanya jika membawa kartu” berarti masuk → membawa kartu. Karena Rani masuk sesuai aturan, ia membawa kartu. Arah kebalikannya tidak dinyatakan.",
+      "source": "Soal latihan orisinal Sobri Study Roadmap; bukan soal resmi LPDP; perlu verifikasi."
+    },
+    {
+      "id": "LPDP-L30-27",
+      "category": "Penalaran Logis",
+      "subcategory": "Kendala penempatan",
+      "difficulty": "Sulit",
+      "estimated_seconds": 120,
+      "question": "Tiga orang P, Q, R duduk di kursi bernomor 1, 2, 3 dari kiri ke kanan, masing-masing satu orang. P tidak di kursi 1. Q tepat di sebelah kiri R. Siapa di kursi 3?",
+      "options": {
+        "A": "P",
+        "B": "Tidak dapat ditentukan",
+        "C": "P atau Q",
+        "D": "R",
+        "E": "Q"
+      },
+      "correct_answer": "A",
+      "explanation": "Pasangan (Q,R) dapat di (1,2) atau (2,3). Jika (2,3), P harus di kursi 1, bertentangan dengan aturan. Jadi Q di 1, R di 2, dan P di 3.",
+      "source": "Soal latihan orisinal Sobri Study Roadmap; bukan soal resmi LPDP; perlu verifikasi."
+    },
+    {
+      "id": "LPDP-L30-28",
+      "category": "Penalaran Logis",
+      "subcategory": "Ekuivalensi",
+      "difficulty": "Sulit",
+      "estimated_seconds": 90,
+      "question": "Pernyataan yang ekuivalen dengan “Jika saya belajar, maka saya membuat catatan” adalah …",
+      "options": {
+        "A": "Saya belajar dan tidak membuat catatan.",
+        "B": "Jika saya membuat catatan, maka saya belajar.",
+        "C": "Jika saya tidak membuat catatan, maka saya tidak belajar.",
+        "D": "Saya selalu membuat catatan tanpa belajar.",
+        "E": "Jika saya tidak belajar, maka saya tidak membuat catatan."
+      },
+      "correct_answer": "C",
+      "explanation": "Implikasi P → Q ekuivalen dengan kontraposisi bukan Q → bukan P. Konvers dan invers pada pilihan lain tidak selalu ekuivalen.",
+      "source": "Soal latihan orisinal Sobri Study Roadmap; bukan soal resmi LPDP; perlu verifikasi."
+    },
+    {
+      "id": "LPDP-L30-29",
+      "category": "Penalaran Logis",
+      "subcategory": "Deduksi",
+      "difficulty": "Sedang",
+      "estimated_seconds": 90,
+      "question": "Semua laporan final telah diperiksa. Tidak ada laporan yang telah diperiksa berstatus draft. Kesimpulan yang pasti benar adalah …",
+      "options": {
+        "A": "Semua draft adalah laporan final.",
+        "B": "Tidak ada laporan yang diperiksa.",
+        "C": "Sebagian laporan final berstatus draft.",
+        "D": "Semua laporan yang bukan draft adalah final.",
+        "E": "Tidak ada laporan final berstatus draft."
+      },
+      "correct_answer": "E",
+      "explanation": "Laporan final termasuk laporan yang diperiksa, dan kelompok diperiksa tidak beririsan dengan draft. Maka final tidak beririsan dengan draft. Keberadaan laporan tertentu tidak perlu diasumsikan.",
+      "source": "Soal latihan orisinal Sobri Study Roadmap; bukan soal resmi LPDP; perlu verifikasi."
+    },
+    {
+      "id": "LPDP-L30-30",
+      "category": "Penalaran Logis",
+      "subcategory": "Asumsi argumen",
+      "difficulty": "Sulit",
+      "estimated_seconds": 120,
+      "question": "Argumen: “Program pendampingan esai akan meningkatkan kualitas esai jika peserta menerapkan umpan balik mentor.” Asumsi yang diperlukan agar mekanisme tersebut berjalan adalah …",
+      "options": {
+        "A": "Peserta tidak perlu melakukan revisi.",
+        "B": "Setiap peserta pasti mendapat beasiswa.",
+        "C": "Umpan balik mentor relevan dengan perbaikan kualitas esai.",
+        "D": "Seluruh mentor memiliki latar belakang identik.",
+        "E": "Jumlah kata esai selalu sama."
+      },
+      "correct_answer": "C",
+      "explanation": "Mekanisme argumen mengandalkan penerapan umpan balik untuk memperbaiki kualitas. Jika umpan balik tidak relevan, penerapannya tidak mendukung perbaikan yang diharapkan. Kelulusan beasiswa tidak dinyatakan.",
+      "source": "Soal latihan orisinal Sobri Study Roadmap; bukan soal resmi LPDP; perlu verifikasi."
+    }
+  ]
+}

@@ -103,10 +103,7 @@ test("questions persist, errors review, flashcard repetition and backup roundtri
 }) => {
   page.on("dialog", (d) => d.accept());
   await nav(page, "questions");
-  await page
-    .getByRole("button", { name: "Kerjakan", exact: true })
-    .first()
-    .click();
+  await page.locator('[data-action="question:sample-1"]').click();
   await page.getByLabel("20", { exact: true }).check();
   await page.getByRole("button", { name: "Periksa jawaban" }).click();
   await expect(page.locator("#answer-result")).toContainText("Belum tepat");
@@ -143,7 +140,7 @@ test("questions persist, errors review, flashcard repetition and backup roundtri
   await page.getByRole("button", { name: "Replace seluruh data" }).click();
   await expect(page.locator("#toast")).toContainText("Import berhasil");
   expect((await read(page, "attempts")).length).toBe(1);
-  expect((await read(page, "questions")).length).toBe(3);
+  expect((await read(page, "questions")).length).toBe(33);
 });
 test("production shell opens offline and accepts new local data", async ({
   page,
@@ -176,10 +173,7 @@ test("production shell opens offline and accepts new local data", async ({
   await page.reload();
   expect((await read(page, "notes"))[0].title).toBe("Catatan offline");
   await nav(page, "questions");
-  await page
-    .getByRole("button", { name: "Kerjakan", exact: true })
-    .first()
-    .click();
+  await page.locator('[data-action="question:sample-1"]').click();
   await page.getByLabel("30", { exact: true }).check();
   await page.getByRole("button", { name: "Periksa jawaban" }).click();
   await expect(page.locator("#answer-result")).toContainText("Benar");
@@ -290,7 +284,7 @@ test("timed mini-tryout recovers after reload and records its result", async ({
   await expect(page.locator("dialog")).toHaveCount(0);
   await page.reload();
   await expect(page.locator("#quiz-clock")).toContainText("Sisa tryout");
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 5; i++) {
     const active = (await read(page, "settings")).find(
       (s) => s.id === "activeQuiz",
     );
@@ -302,11 +296,11 @@ test("timed mini-tryout recovers after reload and records its result", async ({
     await page.getByRole("button", { name: "Periksa jawaban" }).click();
     await expect(page.locator("#answer-result")).toContainText("Benar");
     await page.getByRole("button", { name: "Soal berikutnya →" }).click();
-    if (i < 2)
+    if (i < 4)
       await expect(page.locator("[data-form=answer] button")).toBeEnabled();
   }
   await nav(page, "progress");
-  await expect(page.locator("main")).toContainText("3/3 jawaban benar");
+  await expect(page.locator("main")).toContainText("5/5 jawaban benar");
 });
 
 test("documents, research, notes revisions and English scores persist", async ({
@@ -402,7 +396,7 @@ test("invalid backups are rejected before replacing any data", async ({
   });
   await expect(page.locator("#toast")).toContainText("Gagal");
   await expect(page.locator("#backup-preview")).toBeEmpty();
-  expect(await read(page, "questions")).toHaveLength(3);
+  expect(await read(page, "questions")).toHaveLength(33);
   expect(await read(page, "studySessions")).toHaveLength(0);
 });
 

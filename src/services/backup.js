@@ -32,6 +32,11 @@ export function validateQuestion(q) {
       (q.options.length < 2 || !q.options.includes(q.answer)))
   )
     throw Error("Pilihan atau jenis soal tidak valid");
+  if (
+    q.estimatedSeconds !== undefined &&
+    (!Number.isFinite(q.estimatedSeconds) || q.estimatedSeconds <= 0)
+  )
+    throw Error("Estimasi waktu soal tidak valid");
   return q;
 }
 export async function backup() {
@@ -170,6 +175,46 @@ export function validate(b) {
             number(r, "deadline");
             number(r, "questionStart");
             text(r, "runId");
+          }
+          if (r.id === "lpdp-active-practice") {
+            if (
+              !Array.isArray(r.ids) ||
+              !r.ids.length ||
+              r.ids.some((id) => !safeID(id)) ||
+              new Set(r.ids).size !== r.ids.length ||
+              !Number.isInteger(r.index) ||
+              r.index < 0 ||
+              r.index >= r.ids.length ||
+              !["practice", "timed", "review"].includes(r.mode) ||
+              !["running", "completed", "ended", "expired"].includes(r.status)
+            )
+              throw Error("Sesi latihan LPDP tidak valid");
+            text(r, "runId");
+            number(r, "startedAt");
+            number(r, "questionStart");
+            number(r, "deadline");
+            number(r, "estimatedSeconds");
+          }
+          if (r.kind === "lpdp-result") {
+            for (const key of [
+              "score",
+              "correct",
+              "total",
+              "answered",
+              "unanswered",
+              "wrong",
+              "seconds",
+            ])
+              number(r, key);
+            if (
+              r.answered + r.unanswered !== r.total ||
+              r.correct + r.wrong !== r.answered ||
+              r.score > 100
+            )
+              throw Error("Skor LPDP tidak valid");
+            text(r, "runId");
+            text(r, "endedAt");
+            date(r, "date");
           }
           if (r.id === "toefl") number(r, "target");
           if (r.kind === "english-score") {
